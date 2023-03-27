@@ -2,8 +2,17 @@
 
 ## OS: Windows XP
 
+[Colour Palette](https://coolors.co/1362c9-4691ec-d3e5fb-1e8c1e-1f58d9-0a92eb)
+
 ### Pseudo-apps:
 
-1. Calculator
-2. Notepad
-3. Video Player
+- [ ] Calculator
+- [ ] Notepad
+- [ ] Video Player
+- [ ] (maybe) Paint
+
+
+
+### Notes
+
+- time & date !important
