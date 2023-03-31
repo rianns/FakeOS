@@ -1,0 +1,23 @@
+@import "./../modules/theme";
+
+@mixin text-on-blue {
+  color: white;
+}
+
+@mixin main-font-tahoma {
+  font-family: $primary-font-family;
+  font-size: 11px;
+}
+
+@mixin window-titles {
+  font-family: $tertiary-font-family;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+@mixin inner-window-titles {
+  font-family: $secondary-font-family;
+  font-weight: bold;
+  font-size: 11px;
+}
+

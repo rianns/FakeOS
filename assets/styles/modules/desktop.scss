@@ -1,10 +1,11 @@
-// @use "./../mixin/";
+@use "./../mixin/mixins.scss";
 @import "theme";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Tahoma, Verdana, sans-serif;
 }
 
 // 
@@ -29,8 +30,10 @@ html {
   width: 500px;
   position: absolute;
   bottom: 35px;
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
 
   &__header {
+    border-radius: 10px 10px 0 0;
     z-index: 150;
     height: 70px;
     width: 100%;
@@ -41,16 +44,20 @@ html {
     height: calc(100% - 70px - 50px);
     width: 100%;
     display: flex;
+    color: $darker-shade-blue;
 
     &--left {
       background-color: white;
       width: 50%;
       height: 100%;
+      @include mixins.main-font-tahoma;
     }
     &--right {
+      border-left: 1px solid $light-shade-blue;
       background-color: $lighter-shade-blue;
       width: 50%;
       height: 100%;
+      @include mixins.inner-window-titles;
     }
   }
 
@@ -59,6 +66,48 @@ html {
     width: 100%;
     height: 50px;
     bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    @include mixins.main-font-tahoma;
+    @include mixins.text-on-blue;
+
+    div {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+
+      p {
+        margin: 5px 15px 5px 5px;
+      }
+    }
+  }
+}
+
+.left-items {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin: 5px 10px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.right-items {
+  display: flex;
+  align-items: center;
+  
+
+  img {
+    margin: 5px;
+    width: 25px;
+    height: 25px;
   }
 }
 
@@ -71,10 +120,32 @@ html {
   left: 0;
   display: flex;
   justify-content: space-between;
+  @include mixins.text-on-blue;
 
   &__startButton {
     height: 100%;
     width: 100px;
+    
+    button {
+      display: flex;
+      align-items: center;
+      @include mixins.text-on-blue;
+      border: none;
+      border-radius: 0 11px 20px 0;
+      box-shadow: 0 3px 2px rgba(28,62,25,0.5);
+      width: 100%;
+    }
+
+    img {
+      width: 25px;
+      height: 20px;
+      margin: 0 5px 0 10px;
+      filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+    }
+
+    p {
+      text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+    }
 
     &--green {
       height: 100%;
@@ -90,7 +161,15 @@ html {
   &__clockIcons {
     background-color: $tertiary-color-blue;
     height: 100%;
-    width: 150px;
+    width: 120px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
+    &--time {
+      padding: 15px;
+      font-weight: 400;
+      @include mixins.main-font-tahoma;
+    }
   }
 }

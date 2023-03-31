@@ -24,20 +24,98 @@
 		<div id="startMenu" class="start-menu">
 			<div class="start-menu__header"></div>
 			<div class="start-menu__menu">
-				<div class="start-menu__menu--left"></div>
-				<div class="start-menu__menu--right"></div>
+				<div class="start-menu__menu--left">
+					<div class="left-items">
+						<img
+							src="./assets/images/icons/Calculator.png"
+							alt="small calculator icon"
+							class="left-items__icon"
+						/>
+						<p class="left-items__name">Calculator</p>
+					</div>
+					<div class="left-items">
+						<img
+							src="./assets/images/icons/Notepad.png"
+							alt="small notepad icon"
+							class="left-items__icon"
+						/>
+						<p class="left-items__name">Notepad</p>
+					</div>
+					<div class="left-items">
+						<img
+							src="./assets/images/icons/Windows Media Player 9.png"
+							alt="small video player icon"
+							class="left-items__icon"
+						/>
+						<p class="left-items__name">Windows Media Player</p>
+					</div>
+				</div>
+				<div class="start-menu__menu--right">
+					<div class="right-items">
+						<img
+							src="./assets/images/icons/My-Documents.png"
+							alt="documents folder icon"
+							class="right-items__icon"
+						/>
+						<p class="right-items__name">My Documents</p>
+					</div>
+					<div class="right-items">
+						<img
+							src="./assets/images/icons/My-Pictures.png"
+							alt="pictures folder icon"
+							class="right-items__icon"
+						/>
+						<p class="right-items__name">My Pictures</p>
+					</div>
+					<div class="right-items">
+						<img
+							src="./assets/images/icons/My-Videos.png"
+							alt="videos folder icon"
+							class="right-items__icon"
+						/>
+						<p class="right-items__name">My Videos</p>
+					</div>
+					<div class="right-items">
+						<img
+							src="./assets/images/icons/My-Computer.png"
+							alt="My computer folder icon"
+							class="right-items__icon"
+						/>
+						<p class="right-items__name">My Computer</p>
+					</div>
+				</div>
 			</div>
-			<div class="start-menu__footer"></div>
+			<div class="start-menu__footer">
+				<div class="start-menu__footer--logOff">
+					<img
+						src="./assets/images/icons/Logout.png"
+						alt="logout icon"
+					/>
+					<p id="logOffName">Log Off</p>
+				</div>
+				<div class="start-menu__footer--shutDown">
+					<img
+						src="./assets/images/icons/Power.png"
+						alt="power icon"
+					/>
+					<p id="shutDownName">Turn Off Computer</p>
+				</div>
+			</div>
 		</div>
 		<div id="taskbar" class="taskbar">
 			<div class="taskbar__startButton">
 				<button class="taskbar__startButton--green" type="submit">
 					<!-- icon here -->
-					Start
+					<img
+						src="./assets/images/icons/windows.png"
+						alt="microsoft windows logo"
+						id="startButtonIcon"
+					/>
+					<p>Start</p>
 				</button>
 			</div>
 			<div class="taskbar__clockIcons">
-				<div></div>
+				<div id="desktopTime" class="taskbar__clockIcons--time"></div>
 			</div>
 		</div>
 	</body>
