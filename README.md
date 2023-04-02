@@ -8,10 +8,9 @@
 
 ### Pseudo-apps:
 
-- [ ] Calculator
 - [ ] Notepad
 - [ ] Video Player
-- [ ] (maybe) Paint
+- [ ] Calculator
 
 ### Notes
 

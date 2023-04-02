@@ -20,19 +20,38 @@ html {
 }
 
 .start-menu {
-  z-index: 100;
+  z-index: 10;
   height: 600px;
   width: 500px;
   position: absolute;
   bottom: 35px;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  display: none;
 }
 .start-menu__header {
   border-radius: 10px 10px 0 0;
-  z-index: 150;
+  z-index: 20;
   height: 70px;
   width: 100%;
   background: linear-gradient(#1362c9, #4691ec);
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+}
+.start-menu__header--icon {
+  border: 1px solid white;
+  border-radius: 3px;
+  margin: auto 10px;
+  width: 50px;
+  height: 50px;
+}
+.start-menu__header--icon img {
+  width: 100%;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+}
+.start-menu__header--userName {
+  color: white;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
 }
 .start-menu__menu {
   height: calc(100% - 70px - 50px);
@@ -42,6 +61,7 @@ html {
 }
 .start-menu__menu--left {
   background-color: white;
+  padding: 5px;
   width: 50%;
   height: 100%;
   font-family: Tahoma, sans-serif;
@@ -50,6 +70,7 @@ html {
 .start-menu__menu--right {
   border-left: 1px solid #4691ec;
   background-color: #d3e5fb;
+  padding: 5px;
   width: 50%;
   height: 100%;
   font-family: Verdana, sans-serif;
@@ -89,6 +110,11 @@ html {
   width: 50px;
   height: 50px;
 }
+.left-items:hover {
+  color: white;
+  background-color: #003399;
+  cursor: default;
+}
 
 .right-items {
   display: flex;
@@ -98,6 +124,11 @@ html {
   margin: 5px;
   width: 25px;
   height: 25px;
+}
+.right-items:hover {
+  color: white;
+  background-color: #003399;
+  cursor: default;
 }
 
 .taskbar {

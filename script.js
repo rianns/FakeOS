@@ -1,3 +1,19 @@
+// Start Button opening
+// toggle startMenu div at startButton press
+
+const startButtonToggle = () => {
+	const startButtonSection = document.getElementById("startMenu");
+	if (startButtonSection.style.display === "none") {
+		startButtonSection.style.display = "block";
+	} else {
+		startButtonSection.style.display = "none";
+	}
+};
+
+document
+	.getElementById("startButton")
+	.addEventListener("click", startButtonToggle, false);
+
 // DESKTOP TIME
 
 const currentTime = () => {
@@ -26,7 +42,3 @@ const currentTime = () => {
 };
 
 currentTime();
-
-// Start Button opening
-
-//

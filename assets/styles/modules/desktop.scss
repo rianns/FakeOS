@@ -25,19 +25,44 @@ html {
 }
 
 .start-menu {
-  z-index: 100;
+  z-index: 10;
   height: 600px;
   width: 500px;
   position: absolute;
   bottom: 35px;
   box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
 
+  //hiding start menu at initialise
+  display: none;
+
   &__header {
     border-radius: 10px 10px 0 0;
-    z-index: 150;
+    z-index: 20;
     height: 70px;
     width: 100%;
-    background: linear-gradient($dark-shade-blue, $light-shade-blue)
+    background: linear-gradient($dark-shade-blue, $light-shade-blue);
+    display: flex;
+    align-items: center;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+
+    &--icon {
+      border: 1px solid white;
+      border-radius: 3px;
+      margin: auto 10px;
+      width: 50px;
+      height: 50px;
+        
+      img {
+        width: 100%;
+        filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+      }
+      
+    }
+
+    &--userName {
+      @include mixins.text-on-blue;
+      filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+    }
   }
 
   &__menu {
@@ -48,6 +73,7 @@ html {
 
     &--left {
       background-color: white;
+      padding: 5px;
       width: 50%;
       height: 100%;
       @include mixins.main-font-tahoma;
@@ -55,6 +81,7 @@ html {
     &--right {
       border-left: 1px solid $light-shade-blue;
       background-color: $lighter-shade-blue;
+      padding: 5px;
       width: 50%;
       height: 100%;
       @include mixins.inner-window-titles;
@@ -97,17 +124,24 @@ html {
     width: 50px;
     height: 50px;
   }
+
+  &:hover {
+    @include mixins.start-menu-hover;
+  }
 }
 
 .right-items {
   display: flex;
   align-items: center;
-  
 
   img {
     margin: 5px;
     width: 25px;
     height: 25px;
+  }
+
+  &:hover {
+    @include mixins.start-menu-hover;
   }
 }
 

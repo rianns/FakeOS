@@ -21,3 +21,9 @@
   font-size: 11px;
 }
 
+@mixin start-menu-hover {
+  color: white;
+  background-color: $darker-shade-blue;
+  cursor: default;
+}
+
