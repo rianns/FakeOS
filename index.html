@@ -37,7 +37,10 @@
 			</div>
 			<div class="start-menu__menu">
 				<div class="start-menu__menu--left">
-					<div class="left-items">
+					<div
+						onclick="closeAfterAppOpen('.calculator')"
+						class="left-items"
+					>
 						<img
 							src="./assets/images/icons/Calculator.png"
 							alt="small calculator icon"
@@ -45,7 +48,10 @@
 						/>
 						<p class="left-items__name">Calculator</p>
 					</div>
-					<div class="left-items">
+					<div
+						onclick="closeAfterAppOpen('.notepad')"
+						class="left-items"
+					>
 						<img
 							src="./assets/images/icons/Notepad.png"
 							alt="small notepad icon"
@@ -53,7 +59,10 @@
 						/>
 						<p class="left-items__name">Notepad</p>
 					</div>
-					<div class="left-items">
+					<div
+						onclick="closeAfterAppOpen('.video-player')"
+						class="left-items"
+					>
 						<img
 							src="./assets/images/icons/Windows Media Player 9.png"
 							alt="small video player icon"
@@ -117,15 +126,120 @@
 
 		<!-- CALCULATOR -->
 
-		<div id="calculator" class="window-open calculator"></div>
+		<div id="calculator" class="windows calculator">
+			<!-- window bar -->
+			<div id="windowBar" class="window-open">
+				<div class="window-open__left">
+					<img
+						src="./assets/images/icons/Calculator.png"
+						alt="small calculator icon"
+					/>
+					<p id="windowName">Calculator</p>
+				</div>
+				<div class="window-open__right">
+					<div class="window-open--box">_</div>
+					<div class="window-open--box">&#9744;</div>
+					<div
+						onclick="closeApp('.calculator')"
+						id="windowsClose"
+						class="window-open--box"
+					>
+						&times;
+					</div>
+				</div>
+			</div>
+
+			<div class="calculator__grid">
+				<div id="calcOutput" class="calculator__output"></div>
+
+				<button class="calculator__backspace calculator--red">
+					Backspace
+				</button>
+				<button class="calculator__ce calculator--red">CE</button>
+				<button class="calculator__clear calculator--red">C</button>
+
+				<button class="calculator__number">7</button>
+				<button class="calculator__number">8</button>
+				<button class="calculator__number">9</button>
+				<button class="calculator__operand calculator--red">
+					&divide;
+				</button>
+				<button class="calculator__sqrt">&radic;</button>
+				<button class="calculator__number">4</button>
+				<button class="calculator__number">5</button>
+				<button class="calculator__number">6</button>
+				<button class="calculator__operand calculator--red">
+					&times;
+				</button>
+				<button class="calculator__percent">&percnt;</button>
+				<button class="calculator__number">1</button>
+				<button class="calculator__number">2</button>
+				<button class="calculator__number">3</button>
+				<button class="calculator__operand calculator--red">
+					&minus;
+				</button>
+				<button class="calculator__fraction">&frac12;</button>
+				<button class="calculator__number">0</button>
+				<button class="calculator__symbol">+/-</button>
+				<button class="calculator__symbol">.</button>
+				<button class="calculator__operand calculator--red">
+					&plus;
+				</button>
+				<button class="calculator__equal calculator--red">
+					&equals;
+				</button>
+			</div>
+		</div>
 
 		<!-- NOTEPAD -->
 
-		<div id="notepad" class="window-open notepad"></div>
+		<div id="notepad" class="windows notepad">
+			<div id="windowBar" class="window-open">
+				<div class="window-open__left">
+					<img
+						src="./assets/images/icons/Notepad.png"
+						alt="small calculator icon"
+					/>
+					<p id="windowName">Notepad</p>
+				</div>
+				<div class="window-open__right">
+					<div class="window-open--box">_</div>
+					<div class="window-open--box">&#9744;</div>
+					<div
+						onclick="closeApp('.notepad')"
+						id="windowsClose"
+						class="window-open--box"
+					>
+						&times;
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- VIDEO PLAYER -->
 
-		<div class="window-open"></div>
+		<div id="videoPlayer" class="windows video-player">
+			<div id="windowBar" class="window-open">
+				<div class="window-open__left">
+					<img
+						src="./assets/images/icons/Windows Media Player 9.png"
+						alt="small calculator icon"
+					/>
+					<p id="windowName">Windows Media Player</p>
+				</div>
+				<div class="window-open__right">
+					<div class="window-open--box">_</div>
+					<div class="window-open--box">&#9744;</div>
+					<div
+						onclick="closeApp('.video-player')"
+						id="windowsClose"
+						class="window-open--box"
+					>
+						&times;
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<div id="taskbar" class="taskbar">
 			<div class="taskbar__startButton">
