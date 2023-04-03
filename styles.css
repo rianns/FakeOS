@@ -138,32 +138,107 @@ html {
   border-radius: 3px 3px 0 0;
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
 }
+.windows__menu {
+  height: 20px;
+}
+.windows__menu > ul {
+  display: flex;
+  font-family: Tahoma, sans-serif;
+  font-size: 9px;
+  margin: 3px auto;
+}
+.windows__menu > ul li {
+  list-style-type: none;
+  margin-left: 3px;
+}
 
 .calculator {
   position: absolute;
   width: 250px;
-  height: 320px;
+  height: 300px;
   top: 200px;
   left: 400px;
   display: none;
+  background-color: #e7e7d7;
+}
+.calculator__grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(50px, auto) repeat(5, 1fr);
+  gap: 5px;
+  margin: 5px;
+  height: 230px;
+}
+.calculator__top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.calculator__top button {
+  width: 30%;
+}
+.calculator--full {
+  grid-column: span 5;
+}
+.calculator button {
+  height: 100%;
+  outline: none;
+}
+
+#calcOutput {
+  border: 1px solid grey;
+  height: 30px;
 }
 
 .notepad {
   position: absolute;
-  width: 250px;
-  height: 320px;
+  min-width: 350px;
+  min-height: 250px;
   top: 220px;
   left: 420px;
   display: none;
 }
+.notepad__texta textarea {
+  min-width: 350px;
+  min-height: 250px;
+}
 
 .video-player {
   position: absolute;
-  width: 250px;
-  height: 320px;
-  top: 240px;
+  min-width: 300px;
+  min-height: 50px;
+  top: 50px;
   left: 440px;
   display: none;
+  background-color: #e7e7d7;
+}
+.video-player__area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video-player__area video {
+  min-height: 50px;
+  max-height: calc(90vh - 35px - 50px);
+}
+.video-player__controls {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.video-player__controls button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  opacity: 0.9;
 }
 
 .window-open {

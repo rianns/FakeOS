@@ -21,6 +21,12 @@
   font-size: 11px;
 }
 
+@mixin window-menu {
+  font-family: $primary-font-family;
+  font-size: 9px;
+  margin: 3px auto; 
+}
+
 @mixin start-menu-hover {
   color: white;
   background-color: $darker-shade-blue;

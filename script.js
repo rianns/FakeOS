@@ -34,6 +34,36 @@ const closeApp = (openWin) => {
 	}
 };
 
+// Maximise window
+
+const maxWin = (maxWin) => {
+	const appDiv = document.querySelector(maxWin);
+	const appDivComp = window.getComputedStyle(appDiv);
+
+	const ogWidth = appDivComp.width;
+	const ogHeight = appDivComp.height;
+
+	const testFullBrowser =
+		appDivComp.top !== 0 &&
+		appDivComp.right !== 0 &&
+		appDivComp.bottom !== "35px" &&
+		appDivComp.left !== 0;
+
+	if (testFullBrowser) {
+		appDiv.style.top = 0;
+		appDiv.style.right = 0;
+		appDiv.style.bottom = "35px";
+		appDiv.style.left = 0;
+	}
+
+	document.onmouseup = () => {
+		appDiv.style.width = ogWidth;
+		appDiv.style.height = ogHeight;
+		appDiv.style.top = "50px";
+		appDiv.style.left = "440px";
+	};
+};
+
 // Draggable windows
 // selecting windows/area to drag
 const dragWindows = (e) => {
@@ -74,17 +104,34 @@ const dragWindows = (e) => {
 	};
 };
 
-// Calculator
-
+// Window behaviour for each application
 dragWindows(document.querySelector(".calculator"));
+dragWindows(document.querySelector(".notepad"));
+dragWindows(document.querySelector(".video-player"));
+
+// Calculator
 
 // Notepad
 
-dragWindows(document.querySelector(".notepad"));
-
 // Video Player
 
-dragWindows(document.querySelector(".video-player"));
+const videoSample = document.getElementById("videoSample");
+const playBtn = document.getElementById("playBtn");
+const pauseBtn = document.getElementById("pauseBtn");
+const stopBtn = document.getElementById("stopBtn");
+
+playBtn.onclick = () => {
+	videoSample.play();
+};
+
+pauseBtn.onclick = () => {
+	videoSample.pause();
+};
+
+stopBtn.onclick = () => {
+	videoSample.pause();
+	videoSample.currentTime = 0;
+};
 
 // DESKTOP TIME
 

@@ -149,14 +149,27 @@
 				</div>
 			</div>
 
-			<div class="calculator__grid">
-				<div id="calcOutput" class="calculator__output"></div>
+			<div class="windows__menu">
+				<ul>
+					<li>Edit</li>
+					<li>View</li>
+					<li>Help</li>
+				</ul>
+			</div>
 
-				<button class="calculator__backspace calculator--red">
-					Backspace
-				</button>
-				<button class="calculator__ce calculator--red">CE</button>
-				<button class="calculator__clear calculator--red">C</button>
+			<div class="calculator__grid">
+				<div
+					id="calcOutput"
+					class="calculator--output calculator--full"
+				></div>
+
+				<div class="calculator__top calculator--full">
+					<button id="calcBackspace" class="calculator--red">
+						Backspace
+					</button>
+					<button id="calcCE" class="calculator--red">CE</button>
+					<button id="calcClear" class="calculator--red">C</button>
+				</div>
 
 				<button class="calculator__number">7</button>
 				<button class="calculator__number">8</button>
@@ -214,6 +227,21 @@
 					</div>
 				</div>
 			</div>
+			<div class="windows__menu">
+				<ul>
+					<li>Edit</li>
+					<li>View</li>
+					<li>Help</li>
+				</ul>
+			</div>
+			<div class="notepad__texta">
+				<textarea
+					name="notepad"
+					id="notepad"
+					cols="30"
+					rows="10"
+				></textarea>
+			</div>
 		</div>
 
 		<!-- VIDEO PLAYER -->
@@ -229,7 +257,12 @@
 				</div>
 				<div class="window-open__right">
 					<div class="window-open--box">_</div>
-					<div class="window-open--box">&#9744;</div>
+					<div
+						onmousedown="maxWin('.video-player')"
+						class="window-open--box"
+					>
+						&#9744;
+					</div>
 					<div
 						onclick="closeApp('.video-player')"
 						id="windowsClose"
@@ -238,6 +271,23 @@
 						&times;
 					</div>
 				</div>
+			</div>
+			<div class="windows__menu">
+				<ul>
+					<li>Edit</li>
+					<li>View</li>
+					<li>Help</li>
+				</ul>
+			</div>
+			<div class="video-player__area">
+				<video id="videoSample">
+					<source src="./assets/videos/kittenPaws.mp4" />
+				</video>
+			</div>
+			<div class="video-player__controls">
+				<button id="pauseBtn">&#9208;</button>
+				<button id="playBtn">&#9658;</button>
+				<button id="stopBtn">&#9209;</button>
 			</div>
 		</div>
 
